@@ -16,6 +16,10 @@ body {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: hsl(0, 0%, 12%);
     max-width: 400px;
     max-height: 600px;
@@ -23,18 +27,25 @@ body {
     padding: 16px;
     overflow: hidden;
     border-radius: 15px;
+    color: hsl(0, 0%, 100%);
+    padding: 30px;
 }
 
 .card-image-wrapper {
-    padding: 16px; /* Padding attorno all'immagine */
     display: flex;
     justify-content: center; /* Centrare l'immagine */
     align-items: center;
-    
+    border-radius: 50px;
+    max-width: 100px;
+    max-height: 100px;
+    overflow: hidden;
 }
 
 .card-image {
-    max-width: fit-content;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+    
 }
 
 .card-content {
@@ -51,7 +62,26 @@ body {
     margin: 6px;
     padding: 8px;
     background-color: hsl(0, 0%, 20%);
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    cursor: pointer;
 }
+
+.card-element:hover,
+.card-element:focus-within {
+    background-color: hsl(75, 94%, 57%);
+}
+
+.card-element a:focus-visible {
+    outline: 2px solid hsl(75, 94%, 57%); /* Bordo verde elegante */
+    border-radius: 5px;
+}
+
+.card-element:hover a,
+.card-element:focus-within a {    
+    color: hsl(0, 0%, 8%);
+}   
 
 footer {
     position: fixed;
@@ -60,11 +90,28 @@ footer {
 
 .attribution { 
     font-size: 11px;
-    text-align: center; 
-    
+    text-align: center;
+    color: hsl(0, 0%, 100%);;    
 }
 
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: hsl(75, 94%, 57%); 
 }
 
+span {
+    font-weight: 600;
+    color: hsl(75, 94%, 57%);
+}
+
+a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 400;
+}
